@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+div{width:200px; height:200px; border-radius:50%; margin:50px auto; background:-webkit-linear-gradient(45deg,#609,#6F9,#0FF);}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.querySelector('div');
+	var p=0;
+	setInterval(function(){
+		p++;
+		oDiv.style.background='-webkit-linear-gradient('+-p+'deg,#609,#6F9,#0FF)';	
+		
+	},30);
+	
+};
+</script>
+</head>
+
+<body>
+	<div></div>
+</body>
+</html>

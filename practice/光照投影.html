@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0; padding:0}
+div{width:100px; height:100px; background:#FC3; border-radius:50%; margin:0px auto; position:absolute; left:0; top:0; box-shadow:0 0 50px #FFFF00;}
+p{text-align:center; font-size:30px; font-weight:bold; margin-top:100px; text-shadow:0 0 0 #000;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.querySelector('div');	
+	var oP=document.querySelector('p');
+	document.onmousemove=function(ev){
+		oDiv.style.left=ev.pageX-oDiv.offsetWidth/2+'px';
+		oDiv.style.top=ev.pageY-oDiv.offsetHeight/2+'px';
+		
+		var disX=(oP.offsetLeft+oP.offsetWidth/2)-(oDiv.offsetLeft+oDiv.offsetWidth/2);
+		var disY=(oP.offsetTop+oP.offsetHeight/2)-(oDiv.offsetTop+oDiv.offsetHeight/2);
+		var c=Math.sqrt(Math.pow(disX,2)+Math.pow(disY,2));
+		
+		oP.style.textShadow=disX/2+'px '+disY/2+'px '+c/20+'px #000';
+		
+	};
+};
+
+</script>
+</head>
+
+<body>
+	<div></div>
+    <p>哈哈哈哈嘻嘻嘻</p>
+</body>
+</html>
